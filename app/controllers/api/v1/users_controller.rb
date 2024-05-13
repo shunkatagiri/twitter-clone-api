@@ -32,6 +32,10 @@ class Api::V1::UsersController < ApplicationController
     head :no_content
   end
 
+  def me
+    render json: current_user
+  end
+
   private
 
     def set_user

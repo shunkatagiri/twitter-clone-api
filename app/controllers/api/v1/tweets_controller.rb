@@ -28,7 +28,8 @@ class Api::V1::TweetsController < ApplicationController
   end
 
   def destroy
-    @tweet.destroy
+    tweet = Tweet.find(params[:id])
+    tweet.destroy
     head :no_content
   end
 
